@@ -1,0 +1,94 @@
+wilayah,tahun,bulan,risk_label,final_score,climate_score,historical_score,sifat_hujan,HTH_hari,rasio_KAT_terhadap_normal,faktor_dominan,rekomendasi_aksi
+BANYUWANGI,2026,3,medium,4,2,2,N,4,1.0308525975110705,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+PAMEKASAN,2026,3,medium,4,2,2,N,5,0.9655006214219256,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+TULUNGAGUNG,2026,3,medium,4,2,2,N,4,1.001447805930351,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+BANGKALAN,2026,1,medium,3,1,2,N,2,1.015649518028991,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+BANGKALAN,2026,2,medium,3,1,2,AN,2,0.9864128731307196,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+BANGKALAN,2026,3,medium,3,1,2,N,3,0.9673537759872796,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+BATU,2026,1,medium,3,1,2,N,2,1.0183124054050767,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+BATU,2026,2,medium,3,1,2,AN,2,1.00580974198297,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+BATU,2026,3,medium,3,1,2,AN,3,0.9657662241779212,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+BLITAR,2026,1,medium,3,1,2,AN,2,1.0414636175676566,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+BLITAR,2026,3,medium,3,1,2,N,3,1.0166760406018078,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+GRESIK,2026,2,medium,3,1,2,AN,3,1.015156023956742,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+GRESIK,2026,3,medium,3,1,2,N,1,0.9934380267362024,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+KEDIRI,2026,1,medium,3,1,2,AN,2,1.0395554145361223,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+KEDIRI,2026,2,medium,3,1,2,AN,0,1.0220670065987678,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+KEDIRI,2026,3,medium,3,1,2,N,2,1.0020230041751568,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+LAMONGAN,2026,1,medium,3,1,2,N,2,1.0368167243328053,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+LAMONGAN,2026,2,medium,3,1,2,AN,1,1.0088206320502944,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+LAMONGAN,2026,3,medium,3,1,2,N,1,0.9833736301282509,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+MAGETAN,2026,2,medium,3,1,2,AN,0,1.0215497931978916,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+MAGETAN,2026,3,medium,3,1,2,N,3,1.010304471462596,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+MOJOKERTO,2026,2,medium,3,1,2,AN,1,1.017511654526736,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+MOJOKERTO,2026,3,medium,3,1,2,N,2,0.987049788818269,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+PACITAN,2026,1,medium,3,1,2,AN,2,1.0255045339473052,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+PACITAN,2026,2,medium,3,1,2,AN,1,1.0162596032286308,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+PACITAN,2026,3,medium,3,1,2,N,3,1.0043005620177416,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+PAMEKASAN,2026,1,medium,3,1,2,N,2,1.0293192507477251,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+PAMEKASAN,2026,2,medium,3,1,2,AN,1,1.0160537887748275,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+PONOROGO,2026,2,medium,3,1,2,AN,1,1.028334618109465,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+PONOROGO,2026,3,medium,3,1,2,N,3,1.0138223850785864,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+PROBOLINGGO,2026,3,medium,3,1,2,AN,6,1.0990046010879726,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+SAMPANG,2026,1,medium,3,1,2,N,1,1.021281036851029,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+SAMPANG,2026,2,medium,3,1,2,AN,2,1.0079032319306818,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+SAMPANG,2026,3,medium,3,1,2,N,2,0.9612864585531388,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+SIDOARJO,2026,2,medium,3,1,2,AN,1,1.029622423690851,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+SIDOARJO,2026,3,medium,3,1,2,N,1,1.005433919378594,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+SUMENEP,2026,1,medium,3,1,2,AN,1,1.0241689809751946,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+SUMENEP,2026,2,medium,3,1,2,AN,1,1.0242840538010207,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+SUMENEP,2026,3,medium,3,1,2,N,3,0.9761488421787996,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+SURABAYA,2026,1,medium,3,1,2,N,4,1.0577842093978855,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+SURABAYA,2026,2,medium,3,1,2,AN,3,1.0165674952224926,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+SURABAYA,2026,3,medium,3,1,2,N,2,0.9982437898997912,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+TULUNGAGUNG,2026,1,medium,3,1,2,AN,2,1.0398406864292062,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+TULUNGAGUNG,2026,2,medium,3,1,2,AN,0,1.0278282307033293,Sensitivitas historis wilayah,Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.
+JEMBER,2026,3,low,2,2,0,N,6,1.03994673041168,"HTH panjang, Ketersediaan air rendah",Pantau rutin; belum membutuhkan intervensi prioritas.
+BOJONEGORO,2026,1,low,2,1,1,N,2,1.0173000967100163,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+BOJONEGORO,2026,2,low,2,1,1,AN,0,0.9966559184436364,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+BOJONEGORO,2026,3,low,2,1,1,N,1,0.982018676298696,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+LUMAJANG,2026,3,low,2,1,1,N,4,1.0452652907827369,"HTH panjang, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+MALANG,2026,1,low,2,1,1,AN,2,1.022824055089358,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+MALANG,2026,2,low,2,1,1,AN,2,1.028535168915925,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+MALANG,2026,3,low,2,1,1,N,3,0.9880074485334812,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+NGANJUK,2026,1,low,2,1,1,N,2,1.0208475967715935,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+NGANJUK,2026,2,low,2,1,1,AN,0,1.0025750922715464,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+NGANJUK,2026,3,low,2,1,1,N,2,0.99300331811595,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+SITUBONDO,2026,3,low,2,1,1,AN,5,1.0658233251546891,"HTH panjang, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+TRENGGALEK,2026,1,low,2,1,1,AN,2,1.0097644451635786,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+TRENGGALEK,2026,2,low,2,1,1,AN,0,1.0025836726400827,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+TRENGGALEK,2026,3,low,2,1,1,N,3,0.9825803449365708,"Ketersediaan air rendah, Sensitivitas historis wilayah",Pantau rutin; belum membutuhkan intervensi prioritas.
+BANYUWANGI,2026,1,low,2,0,2,AN,2,1.0984604412675196,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+BANYUWANGI,2026,2,low,2,0,2,AN,1,1.0835171108519317,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+BLITAR,2026,2,low,2,0,2,AN,2,1.0463678878019644,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+GRESIK,2026,1,low,2,0,2,N,2,1.054127672318221,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+MAGETAN,2026,1,low,2,0,2,AN,2,1.0512339370311936,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+MOJOKERTO,2026,1,low,2,0,2,N,3,1.0570373105170483,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+PASURUAN,2026,1,low,2,0,2,N,3,1.1412174449949926,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+PASURUAN,2026,2,low,2,0,2,AN,2,1.1364536010704784,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+PASURUAN,2026,3,low,2,0,2,AN,3,1.0654327775373664,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+PONOROGO,2026,1,low,2,0,2,AN,2,1.0512205186234456,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+PROBOLINGGO,2026,1,low,2,0,2,AN,3,1.1613498739246249,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+PROBOLINGGO,2026,2,low,2,0,2,AN,3,1.1264357886341536,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+SIDOARJO,2026,1,low,2,0,2,N,2,1.072063432840782,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+BONDOWOSO,2026,3,low,1,1,0,AN,4,1.0509221063015155,HTH panjang,Pantau rutin; belum membutuhkan intervensi prioritas.
+JOMBANG,2026,2,low,1,1,0,AN,0,1.0232795234435907,Ketersediaan air rendah,Pantau rutin; belum membutuhkan intervensi prioritas.
+JOMBANG,2026,3,low,1,1,0,N,2,0.991927757081313,Ketersediaan air rendah,Pantau rutin; belum membutuhkan intervensi prioritas.
+MADIUN,2026,2,low,1,1,0,AN,1,1.024626158945957,Ketersediaan air rendah,Pantau rutin; belum membutuhkan intervensi prioritas.
+MADIUN,2026,3,low,1,1,0,N,3,1.011050078674276,Ketersediaan air rendah,Pantau rutin; belum membutuhkan intervensi prioritas.
+NGAWI,2026,2,low,1,1,0,AN,0,1.0161194382531311,Ketersediaan air rendah,Pantau rutin; belum membutuhkan intervensi prioritas.
+NGAWI,2026,3,low,1,1,0,N,1,0.9977524415803404,Ketersediaan air rendah,Pantau rutin; belum membutuhkan intervensi prioritas.
+TUBAN,2026,1,low,1,1,0,N,2,1.0281887848209137,Ketersediaan air rendah,Pantau rutin; belum membutuhkan intervensi prioritas.
+TUBAN,2026,2,low,1,1,0,N,1,0.99833318191865,Ketersediaan air rendah,Pantau rutin; belum membutuhkan intervensi prioritas.
+TUBAN,2026,3,low,1,1,0,N,1,0.9883178616714052,Ketersediaan air rendah,Pantau rutin; belum membutuhkan intervensi prioritas.
+LUMAJANG,2026,1,low,1,0,1,AN,2,1.099313916377113,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+LUMAJANG,2026,2,low,1,0,1,AN,1,1.087448410723856,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+SITUBONDO,2026,1,low,1,0,1,AN,2,1.1337163966979604,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+SITUBONDO,2026,2,low,1,0,1,AN,2,1.118448026710956,Sensitivitas historis wilayah,Pantau rutin; belum membutuhkan intervensi prioritas.
+BONDOWOSO,2026,1,low,0,0,0,N,2,1.1172578915719555,Tidak ada faktor dominan ekstrem,Pantau rutin; belum membutuhkan intervensi prioritas.
+BONDOWOSO,2026,2,low,0,0,0,AN,1,1.0999331862365709,Tidak ada faktor dominan ekstrem,Pantau rutin; belum membutuhkan intervensi prioritas.
+JEMBER,2026,1,low,0,0,0,AN,2,1.0843385690144869,Tidak ada faktor dominan ekstrem,Pantau rutin; belum membutuhkan intervensi prioritas.
+JEMBER,2026,2,low,0,0,0,AN,1,1.0752011244528747,Tidak ada faktor dominan ekstrem,Pantau rutin; belum membutuhkan intervensi prioritas.
+JOMBANG,2026,1,low,0,0,0,N,2,1.0609199359964887,Tidak ada faktor dominan ekstrem,Pantau rutin; belum membutuhkan intervensi prioritas.
+MADIUN,2026,1,low,0,0,0,AN,2,1.0550291814860595,Tidak ada faktor dominan ekstrem,Pantau rutin; belum membutuhkan intervensi prioritas.
+NGAWI,2026,1,low,0,0,0,AN,2,1.051438634870178,Tidak ada faktor dominan ekstrem,Pantau rutin; belum membutuhkan intervensi prioritas.

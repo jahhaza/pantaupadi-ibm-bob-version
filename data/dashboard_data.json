@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "PantauPadi",
+    "subtitle": "Dashboard Early Warning Risiko Panen Padi Jawa Timur",
+    "dataSource": "BPS & Google Earth Engine",
+    "lastUpdate": "Maret 2026",
+    "forecastPeriod": "Mei – Agustus 2026"
+  },
+
+  "ringkasan": {
+    "totalObservasi": 3069,
+    "distribusiRisiko": [
+      { "label": "Low",    "jumlah": 830,  "persen": 27.04, "color": "#22c55e" },
+      { "label": "Medium", "jumlah": 1371, "persen": 44.67, "color": "#f59e0b" },
+      { "label": "High",   "jumlah": 868,  "persen": 28.28, "color": "#ef4444" }
+    ]
+  },
+
+  "trendTahunan": {
+    "labels": ["2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+    "avgClimateScore": [3.844,4.169,1.944,1.917,1.134,3.976,3.234,1.272,0.785],
+    "avgFinalScore":   [5.263,5.589,3.363,3.336,2.554,5.395,4.653,2.691,2.204],
+    "avgHTH":          [11.462,12.32,8.86,8.589,6.457,13.72,11.04,7.903,2.043],
+    "avgRasioHujan":   [0.762,0.63,1.185,1.382,1.761,0.775,0.959,1.766,1.177],
+    "avgRasioKAT":     [0.855,0.821,1.051,1.081,1.199,0.897,0.894,1.113,1.033]
+  },
+
+  "risikoPerTahun": {
+    "labels": ["2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+    "low":    [13.17,12.63,28.23,40.05,45.7,10.48,14.25,45.43,52.69],
+    "medium": [35.48,28.49,59.68,44.35,53.23,34.68,50.0,50.81,47.31],
+    "high":   [51.34,58.87,12.1,15.59,1.08,54.84,35.75,3.76,0.0]
+  },
+
+  "bulanRawan": {
+    "labels": ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"],
+    "persenHighRisk": [1.43,1.43,8.96,21.77,50.4,50.4,37.9,39.92,47.98,47.58,25.0,15.73]
+  },
+
+  "topWilayahHighRisk": [
+    { "wilayah": "BLITAR",      "persen": 39.39, "jumlah": 39, "total": 99 },
+    { "wilayah": "MOJOKERTO",   "persen": 37.37, "jumlah": 37, "total": 99 },
+    { "wilayah": "PAMEKASAN",   "persen": 37.37, "jumlah": 37, "total": 99 },
+    { "wilayah": "PROBOLINGGO", "persen": 36.36, "jumlah": 36, "total": 99 },
+    { "wilayah": "SAMPANG",     "persen": 36.36, "jumlah": 36, "total": 99 },
+    { "wilayah": "LAMONGAN",    "persen": 35.35, "jumlah": 35, "total": 99 },
+    { "wilayah": "PASURUAN",    "persen": 35.35, "jumlah": 35, "total": 99 },
+    { "wilayah": "SUMENEP",     "persen": 35.35, "jumlah": 35, "total": 99 },
+    { "wilayah": "BATU",        "persen": 34.34, "jumlah": 34, "total": 99 },
+    { "wilayah": "SURABAYA",    "persen": 34.34, "jumlah": 34, "total": 99 }
+  ],
+
+  "faktorDominan": [
+    { "faktor": "Sensitivitas Historis",       "jumlah": 897 },
+    { "faktor": "4 Faktor Gabungan",           "jumlah": 294 },
+    { "faktor": "HTH + Sensitivitas",          "jumlah": 256 },
+    { "faktor": "KAT + Sensitivitas",          "jumlah": 252 },
+    { "faktor": "Ketersediaan Air Rendah",     "jumlah": 206 },
+    { "faktor": "HTH Panjang",                 "jumlah": 165 },
+    { "faktor": "CH + HTH + KAT",             "jumlah": 153 },
+    { "faktor": "CH Bawah Normal",             "jumlah": 91  },
+    { "faktor": "Tidak Ada Faktor Ekstrem",    "jumlah": 79  }
+  ],
+
+  "distribusiPrediksi": [
+    { "bulan": "Mei 2026",    "low": 9, "medium": 17, "high": 5  },
+    { "bulan": "Juni 2026",   "low": 5, "medium": 2,  "high": 24 },
+    { "bulan": "Juli 2026",   "low": 5, "medium": 11, "high": 15 },
+    { "bulan": "Agustus 2026","low": 5, "medium": 2,  "high": 24 }
+  ],
+
+  "prediksiDetail": [
+    { "wilayah":"BANGKALAN",   "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":3, "rasio_KAT":0.967 },
+    { "wilayah":"BANYUWANGI",  "mei":"high",  "juni":"high",  "juli":"medium","agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":4, "rasio_KAT":1.031 },
+    { "wilayah":"BATU",        "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":3, "rasio_KAT":0.966 },
+    { "wilayah":"BLITAR",      "mei":"high",  "juni":"high",  "juli":"medium","agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":3, "rasio_KAT":1.017 },
+    { "wilayah":"BOJONEGORO",  "mei":"low",   "juni":"low",   "juli":"low",   "agustus":"high",  "faktor_dominan":"Ketersediaan air rendah, Sensitivitas historis wilayah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":1, "rasio_KAT":0.982 },
+    { "wilayah":"BONDOWOSO",   "mei":"low",   "juni":"low",   "juli":"low",   "agustus":"low",   "faktor_dominan":"HTH panjang", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":4, "rasio_KAT":1.051 },
+    { "wilayah":"GRESIK",      "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":1, "rasio_KAT":0.993 },
+    { "wilayah":"JEMBER",      "mei":"low",   "juni":"medium","juli":"medium","agustus":"medium","faktor_dominan":"HTH panjang, Ketersediaan air rendah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":6, "rasio_KAT":1.040 },
+    { "wilayah":"JOMBANG",     "mei":"low",   "juni":"medium","juli":"medium","agustus":"medium","faktor_dominan":"Ketersediaan air rendah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":2, "rasio_KAT":0.992 },
+    { "wilayah":"KEDIRI",      "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":2, "rasio_KAT":1.002 },
+    { "wilayah":"LAMONGAN",    "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":1, "rasio_KAT":0.983 },
+    { "wilayah":"LUMAJANG",    "mei":"low",   "juni":"high",  "juli":"medium","agustus":"low",   "faktor_dominan":"HTH panjang, Sensitivitas historis wilayah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":4, "rasio_KAT":1.045 },
+    { "wilayah":"MADIUN",      "mei":"low",   "juni":"low",   "juli":"low",   "agustus":"low",   "faktor_dominan":"Ketersediaan air rendah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":3, "rasio_KAT":1.011 },
+    { "wilayah":"MAGETAN",     "mei":"medium","juni":"high",  "juli":"medium","agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":3, "rasio_KAT":1.010 },
+    { "wilayah":"MALANG",      "mei":"medium","juni":"high",  "juli":"medium","agustus":"high",  "faktor_dominan":"Ketersediaan air rendah, Sensitivitas historis wilayah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":3, "rasio_KAT":0.988 },
+    { "wilayah":"MOJOKERTO",   "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":2, "rasio_KAT":0.987 },
+    { "wilayah":"NGANJUK",     "mei":"low",   "juni":"high",  "juli":"medium","agustus":"high",  "faktor_dominan":"Ketersediaan air rendah, Sensitivitas historis wilayah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":2, "rasio_KAT":0.993 },
+    { "wilayah":"NGAWI",       "mei":"low",   "juni":"low",   "juli":"low",   "agustus":"low",   "faktor_dominan":"Ketersediaan air rendah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":1, "rasio_KAT":0.998 },
+    { "wilayah":"PACITAN",     "mei":"medium","juni":"high",  "juli":"medium","agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":3, "rasio_KAT":1.004 },
+    { "wilayah":"PAMEKASAN",   "mei":"high",  "juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":5, "rasio_KAT":0.966 },
+    { "wilayah":"PASURUAN",    "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":3, "rasio_KAT":1.065 },
+    { "wilayah":"PONOROGO",    "mei":"medium","juni":"high",  "juli":"medium","agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":3, "rasio_KAT":1.014 },
+    { "wilayah":"PROBOLINGGO", "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":6, "rasio_KAT":1.099 },
+    { "wilayah":"SAMPANG",     "mei":"high",  "juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":2, "rasio_KAT":0.961 },
+    { "wilayah":"SIDOARJO",    "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":1, "rasio_KAT":1.005 },
+    { "wilayah":"SITUBONDO",   "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"HTH panjang, Sensitivitas historis wilayah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":5, "rasio_KAT":1.066 },
+    { "wilayah":"SUMENEP",     "mei":"high",  "juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":3, "rasio_KAT":0.976 },
+    { "wilayah":"SURABAYA",    "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":2, "rasio_KAT":0.998 },
+    { "wilayah":"TRENGGALEK",  "mei":"medium","juni":"high",  "juli":"medium","agustus":"high",  "faktor_dominan":"Ketersediaan air rendah, Sensitivitas historis wilayah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":3, "rasio_KAT":0.983 },
+    { "wilayah":"TUBAN",       "mei":"low",   "juni":"low",   "juli":"low",   "agustus":"low",   "faktor_dominan":"Ketersediaan air rendah", "rekomendasi":"Pantau rutin; belum membutuhkan intervensi prioritas.", "HTH":1, "rasio_KAT":0.988 },
+    { "wilayah":"TULUNGAGUNG", "mei":"medium","juni":"high",  "juli":"high",  "agustus":"high",  "faktor_dominan":"Sensitivitas historis wilayah", "rekomendasi":"Lakukan monitoring berkala dan validasi kondisi lapangan pada wilayah rentan.", "HTH":4, "rasio_KAT":1.001 }
+  ]
+}

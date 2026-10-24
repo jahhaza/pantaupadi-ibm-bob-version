@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PantauPadi – Dashboard Early Warning Risiko Panen</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Tailwind Config: custom color tokens -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#166534', light: '#dcfce7', dark: '#14532d' },
+            low:    '#22c55e',
+            medium: '#f59e0b',
+            high:   '#ef4444',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- ========== TOP NAV ========== -->
+  <header class="bg-brand-dark shadow-md sticky top-0 z-50">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+
+      <!-- Logo + Brand -->
+      <div class="flex items-center gap-3">
+        <span class="text-2xl select-none" aria-hidden="true">🌾</span>
+        <div>
+          <h1 class="text-white font-bold text-lg leading-tight tracking-tight">PantauPadi</h1>
+          <p class="text-green-300 text-xs leading-none">Dinas Pertanian Jawa Timur</p>
+        </div>
+      </div>
+
+      <!-- Meta info -->
+      <div class="hidden sm:flex items-center gap-6 text-xs text-green-200">
+        <span id="meta-source" class="flex items-center gap-1">
+          <span class="opacity-70">Sumber:</span>
+          <span class="font-semibold text-white">BPS &amp; Google Earth Engine</span>
+        </span>
+        <span id="meta-update" class="flex items-center gap-1">
+          <span class="opacity-70">Data terbaru:</span>
+          <span class="font-semibold text-white">Maret 2026</span>
+        </span>
+        <span id="meta-forecast" class="flex items-center gap-1 bg-green-700/50 px-2 py-1 rounded-full">
+          <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse inline-block"></span>
+          <span class="font-semibold text-green-100">Forecast Mei–Agustus 2026</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO SUBTITLE ========== -->
+  <section class="bg-gradient-to-r from-brand-dark to-green-800 text-white px-4 sm:px-6 py-5">
+    <div class="max-w-screen-2xl mx-auto">
+      <p class="text-sm sm:text-base text-green-100 max-w-4xl leading-relaxed">
+        Dashboard <span class="font-semibold text-white">early warning</span> berbasis data iklim (Google Earth Engine) &amp; produksi padi (BPS),
+        menampilkan klasifikasi risiko <span class="font-semibold">low / medium / high</span> per kabupaten/kota di Jawa Timur
+        untuk mendukung prioritas pemantauan lapangan, koordinasi irigasi, dan intervensi dini.
+      </p>
+    </div>
+  </section>
+
+  <main class="max-w-screen-2xl mx-auto px-4 sm:px-6 py-6 space-y-8">
+
+    <!-- ========== KPI CARDS ========== -->
+    <section aria-labelledby="kpi-heading">
+      <h2 id="kpi-heading" class="sr-only">Ringkasan Risiko</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <!-- Total observasi -->
+        <article class="card-kpi border-l-4 border-brand">
+          <p class="label-kpi">Total Observasi</p>
+          <p id="kpi-total" class="value-kpi text-brand">—</p>
+          <p class="hint-kpi">rekaman historis</p>
+        </article>
+        <!-- Low -->
+        <article class="card-kpi border-l-4 border-low">
+          <p class="label-kpi">Risiko Rendah</p>
+          <p id="kpi-low" class="value-kpi text-low">—</p>
+          <p class="hint-kpi">dari total observasi</p>
+        </article>
+        <!-- Medium -->
+        <article class="card-kpi border-l-4 border-medium">
+          <p class="label-kpi">Risiko Sedang</p>
+          <p id="kpi-medium" class="value-kpi text-medium">—</p>
+          <p class="hint-kpi">dari total observasi</p>
+        </article>
+        <!-- High -->
+        <article class="card-kpi border-l-4 border-high">
+          <p class="label-kpi">Risiko Tinggi</p>
+          <p id="kpi-high" class="value-kpi text-high">—</p>
+          <p class="hint-kpi">dari total observasi</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== FORECAST SECTION ========== -->
+    <section aria-labelledby="forecast-heading">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+        <h2 id="forecast-heading" class="section-title">🔮 Proyeksi Risiko Mei–Agustus 2026</h2>
+
+        <!-- Month filter tabs -->
+        <div id="month-tabs" class="flex flex-wrap gap-2" role="tablist" aria-label="Pilih bulan prediksi"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <!-- Distribusi doughnut -->
+        <div class="card flex flex-col items-center justify-center py-6">
+          <h3 class="card-title mb-4">Distribusi Risiko Bulan Ini</h3>
+          <div class="w-52 h-52">
+            <canvas id="chart-doughnut" aria-label="Distribusi risiko bulan ini"></canvas>
+          </div>
+          <div id="doughnut-legend" class="flex gap-4 mt-4 text-xs font-medium"></div>
+        </div>
+
+        <!-- Bar chart distribusi per bulan -->
+        <div class="card lg:col-span-2">
+          <h3 class="card-title mb-4">Distribusi Prediksi per Bulan (Mei–Agustus 2026)</h3>
+          <div class="chart-wrap">
+            <canvas id="chart-forecast-bar" aria-label="Distribusi prediksi per bulan"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabel prediksi wilayah -->
+      <div class="card mt-4">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+          <h3 class="card-title" id="tabel-title">Detail Prediksi Wilayah – <span id="tabel-bulan-label">Mei 2026</span></h3>
+          <!-- Search -->
+          <div class="relative">
+            <input id="search-wilayah" type="search" placeholder="Cari wilayah…"
+              class="pl-8 pr-4 py-1.5 text-sm border border-slate-200 rounded-lg bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand/40 w-48" />
+            <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs">🔍</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm" id="tabel-prediksi">
+            <thead>
+              <tr class="bg-slate-100 text-slate-600 uppercase text-xs tracking-wide">
+                <th class="th-cell text-left">Wilayah</th>
+                <th class="th-cell text-center">Mei</th>
+                <th class="th-cell text-center">Juni</th>
+                <th class="th-cell text-center">Juli</th>
+                <th class="th-cell text-center">Agustus</th>
+                <th class="th-cell text-left hidden md:table-cell">Faktor Dominan</th>
+                <th class="th-cell text-center hidden lg:table-cell">HTH (hari)</th>
+                <th class="th-cell text-center hidden lg:table-cell">Rasio KAT</th>
+                <th class="th-cell text-left hidden md:table-cell">Rekomendasi</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-prediksi" class="divide-y divide-slate-100"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ANALISIS HISTORIS ========== -->
+    <section aria-labelledby="historis-heading">
+      <h2 id="historis-heading" class="section-title">📊 Analisis Historis (2018–2026)</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Tren risiko per tahun (stacked bar) -->
+        <div class="card">
+          <h3 class="card-title mb-4">Distribusi Risiko per Tahun (%)</h3>
+          <div class="chart-wrap">
+            <canvas id="chart-risiko-tahun" aria-label="Distribusi risiko per tahun"></canvas>
+          </div>
+        </div>
+
+        <!-- Climate score trend (line) -->
+        <div class="card">
+          <h3 class="card-title mb-4">Tren Skor Iklim &amp; Skor Akhir</h3>
+          <div class="chart-wrap">
+            <canvas id="chart-tren-iklim" aria-label="Tren skor iklim dan skor akhir per tahun"></canvas>
+          </div>
+        </div>
+
+        <!-- Bulan rawan (bar) -->
+        <div class="card">
+          <h3 class="card-title mb-4">Bulan Paling Rawan (% High Risk)</h3>
+          <div class="chart-wrap">
+            <canvas id="chart-bulan-rawan" aria-label="Persentase high risk per bulan"></canvas>
+          </div>
+        </div>
+
+        <!-- Faktor dominan (horizontal bar) -->
+        <div class="card">
+          <h3 class="card-title mb-4">Distribusi Faktor Dominan Risiko</h3>
+          <div class="chart-wrap-tall">
+            <canvas id="chart-faktor" aria-label="Distribusi faktor dominan risiko"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TOP WILAYAH ========== -->
+    <section aria-labelledby="top-heading">
+      <h2 id="top-heading" class="section-title">📍 Top 10 Wilayah Paling Rentan (Historis)</h2>
+      <div class="card">
+        <div class="chart-wrap">
+          <canvas id="chart-top-wilayah" aria-label="Top 10 wilayah high risk historis"></canvas>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="mt-10 border-t border-slate-200 py-6 text-center text-xs text-slate-400">
+    <p>PantauPadi &copy; 2026 · Dinas Pertanian Jawa Timur · Data: BPS &amp; Google Earth Engine</p>
+    <p class="mt-1">MVP Forecast Mei–Agustus 2026 berbasis data Maret 2026 · Bukan kepastian gagal panen, melainkan alat bantu pengambilan keputusan</p>
+  </footer>
+
+  <!-- Script utama -->
+  <script src="script.js"></script>
+</body>
+</html>

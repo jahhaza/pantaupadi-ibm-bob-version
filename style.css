@@ -1,0 +1,245 @@
+/* ==========================================================
+   style.css — PantauPadi Custom Styles
+   Tailwind CSS adalah styling utama; file ini hanya untuk:
+   - komponen reusable yang tidak efisien diulang di HTML
+   - animasi & transisi kustom
+   - override minor yang tidak tersedia di Tailwind CDN
+   ========================================================== */
+
+/* ----- Root variables ----- */
+:root {
+  --color-low:    #22c55e;
+  --color-medium: #f59e0b;
+  --color-high:   #ef4444;
+  --color-brand:  #166534;
+  --radius-card:  0.875rem;
+  --shadow-card:  0 1px 3px 0 rgb(0 0 0 / .07), 0 1px 2px -1px rgb(0 0 0 / .07);
+  --shadow-hover: 0 4px 12px 0 rgb(0 0 0 / .12);
+  --transition:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ----- Global smooth scroll ----- */
+html { scroll-behavior: smooth; }
+
+/* ----- Body font ----- */
+body {
+  font-family: -apple-system, "Segoe UI", "Inter", system-ui, sans-serif;
+}
+
+/* ============================================================
+   CARD BASE
+   ============================================================ */
+.card {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  border: 1px solid #e5e7eb;
+  padding: 1.25rem 1.5rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+/* ============================================================
+   KPI CARD
+   ============================================================ */
+.card-kpi {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  border: 1px solid #e5e7eb;
+  padding: 1.25rem 1.5rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.card-kpi:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.label-kpi {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin-bottom: 0.35rem;
+}
+
+.value-kpi {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.hint-kpi {
+  font-size: 0.72rem;
+  color: #9ca3af;
+  margin-top: 0.2rem;
+}
+
+/* ============================================================
+   SECTION TITLE
+   ============================================================ */
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e3a2f;
+  border-left: 3px solid var(--color-brand);
+  padding-left: 0.6rem;
+}
+
+/* ============================================================
+   CARD TITLE
+   ============================================================ */
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ============================================================
+   CHART WRAP — fixed-height containers so charts scale evenly
+   ============================================================ */
+.chart-wrap {
+  position: relative;
+  height: 260px;
+}
+
+.chart-wrap-tall {
+  position: relative;
+  height: 340px;
+}
+
+/* ============================================================
+   TABLE CELLS
+   ============================================================ */
+.th-cell {
+  padding: 0.6rem 0.75rem;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.td-cell {
+  padding: 0.6rem 0.75rem;
+  color: #374151;
+}
+
+/* Zebra hover -->  handled per row in JS via class */
+#tbody-prediksi tr {
+  transition: background var(--transition);
+}
+#tbody-prediksi tr:hover {
+  background: #f0fdf4;
+}
+
+/* ============================================================
+   RISK BADGE
+   ============================================================ */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.badge-low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-high {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ============================================================
+   MONTH TAB BUTTONS
+   ============================================================ */
+.tab-btn {
+  padding: 0.3rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1.5px solid #d1d5db;
+  background: #ffffff;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.tab-btn.active {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #ffffff;
+}
+
+/* ============================================================
+   SEARCH INPUT FOCUS RING
+   ============================================================ */
+#search-wilayah:focus {
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px rgb(22 101 52 / .15);
+}
+
+/* ============================================================
+   RESPONSIVE tweaks for very small screens
+   ============================================================ */
+@media (max-width: 480px) {
+  .value-kpi { font-size: 1.5rem; }
+  .chart-wrap { height: 200px; }
+  .chart-wrap-tall { height: 280px; }
+  .card { padding: 1rem; }
+}
+
+/* ============================================================
+   SCROLL-BAR STYLING (webkit)
+   ============================================================ */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* ============================================================
+   LOADING SKELETON (used while JSON loads)
+   ============================================================ */
+.skeleton {
+  animation: skeleton-pulse 1.4s ease-in-out infinite;
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+  background-size: 400% 100%;
+  border-radius: 0.25rem;
+}
+
+@keyframes skeleton-pulse {
+  0%   { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
+/* ============================================================
+   DOUGHNUT LEGEND DOTS
+   ============================================================ */
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
